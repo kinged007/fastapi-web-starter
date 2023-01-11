@@ -1,8 +1,6 @@
 # Fastapi Web Starter
 
-Updated: 2022-01-18
-
-[https://shinichiokada.medium.com/](https://shinichiokada.medium.com/) ([Building a Website Starter with FastAPI](https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864)).
+Updated: 2023-01-11
 
 ## Overview
 
@@ -38,18 +36,17 @@ pytest==6.2.5
 
 ## Installation & Usage
 
+Run locally...
+
 ```bash
-$ git clone git@github.com:shinokada/fastapi-web-starter.git
-$ cd fastapi-web-starter
-# install packages
-$ pip install -r requirements.txt
-# start the server
-$ uvicorn app.main:app --reload --port 8080
+$ cd autoblog-manager
+# run executable (Linux/Unix)
+$ sh run.sh --reload --port 8080
+# run executable (Windows)
+$ run.bat
 ```
 
 Visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
-
-![Starting](./images/image-1.png)
 
 ## Features
 
@@ -64,14 +61,34 @@ All tests are under `tests` directory.
 
 ```bash
 # Change the directory
-$ cd fastapi-web-starter
-# Run tests
+$ cd autoblog-manager
+# Run tests (Unix/Linux)
+$ sh test.sh
+# or (Windows)
+$ test.bat
+# or
 $ pytest -v
 ```
 
-## Author
+## Executing on Heroku
 
-[twitter](https://twitter.com/shinokada)
+```bash
+$ heroku login
+$ heroku create
+# Push to Heroku
+$ git push heroku main
+# opens your project in your browser
+$ heroku open
+# Done... Some helpful commands
+# View app process
+$ heroic ps
+# Rename app
+$ heroku apps:rename new_app_name
+# ssh into Heroku
+$ heroku ps:exec
+```
+
+
 
 ## Licence
 

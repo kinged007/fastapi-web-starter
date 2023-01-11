@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 import os
 
 router = APIRouter()
-templates = Jinja2Templates(directory="templates/")
+templates = Jinja2Templates(directory="frontend/templates/")
 
 
 @router.get("/twoforms", response_class=HTMLResponse)

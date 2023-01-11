@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 router = APIRouter()
-templates = Jinja2Templates(directory="templates/")
+templates = Jinja2Templates(directory="frontend/templates/")
 
 
 @router.get("/accordion", response_class=HTMLResponse)
