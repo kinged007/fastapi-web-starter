@@ -70,6 +70,24 @@ $ test.bat
 $ pytest -v
 ```
 
+## Cereate requirements.txt file
+
+```bash
+$ pip install pipreqs
+$ cd my_new_project
+$ pipreqs ./
+# if you already have the requirement.txt
+$ pipreqs --force ./
+```
+Since pipreqs generates it based on import, you need to add the following to the requirements.txt manually.
+
+```bash
+uvicorn==0.12.3
+aiofiles==0.6.0
+python-multipart==0.0.5
+jinja2==2.11.2
+```
+
 ## Executing on Heroku
 
 ```bash
